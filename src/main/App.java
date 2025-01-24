@@ -1,4 +1,9 @@
+package main;
 import java.util.Set;
+import java.util.TreeSet;
+
+import models.Contacto;
+import utils.ContactoComparator;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -7,6 +12,7 @@ public class App {
         runLinkedHashSet();  
         runTreeSet();
         runTreeSetComparator();
+        runEjercicio();
     }
 
     public static void runHashSet(){
@@ -40,9 +46,13 @@ public class App {
         Sets sets = new Sets();
         Set<String> exp = sets.buildTreeSetWithComparator();
         System.out.println("---");
-        System.out.println("Example Tree Hash Set:");
+        System.out.println("Example Tree Hash Set With Comparator:");
         for (String element : exp) {
             System.out.println(element);
         }
+    }
+    public static void runEjercicio(){
+        Set<Contacto> agenda = new TreeSet<>(new ContactoComparator());
+
     }
 }

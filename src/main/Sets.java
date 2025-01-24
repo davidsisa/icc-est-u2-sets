@@ -1,3 +1,4 @@
+package main;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -5,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Sets {
-
+//Metodo que crea un HashSet, el cual, no garantiza el orden de entrada
     public Set<String> buildHashSet(){
         Set<String> myHashSet = new HashSet<>();
         myHashSet.add("Manzana");
@@ -14,7 +15,7 @@ public class Sets {
         myHashSet.add("Mora");
         return myHashSet;
     }
-
+//Metodo que crea un LinkedHashSet, el cual, respeta el orden de entrada.
     public Set<String> buildLinkedHashSet(){
         Set<String> myLinkedHashSet = new LinkedHashSet<>();
         myLinkedHashSet.add("Manzana");
@@ -23,7 +24,7 @@ public class Sets {
         myLinkedHashSet.add("Mora");
         return myLinkedHashSet;
     }
-
+    //Metodo que crea un TreeSet, el cual ordena naturalmente la entrada.
     public  Set<String> buildTreeSet(){
         Set<String> myTreeSet = new TreeSet<>();
         myTreeSet.add("Manzana");
@@ -35,6 +36,7 @@ public class Sets {
     /**
      * @return
      */
+    //Metodo que ordena las entradas por longitud, y luego por orden alfabetico
     public Set<String> buildTreeSetWithComparator(){
         Comparator<String> comparator = new Comparator<String>(){
 
