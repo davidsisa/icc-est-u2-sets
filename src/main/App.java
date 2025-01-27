@@ -54,8 +54,20 @@ public class App {
     }
     public static void runEjercicio(){
         Set<Contacto> agenda = new TreeSet<>(new ContactoComparator());
+        /* 
         Contacto c1 = new Contacto ("Pedro","Lopez","123456789");
         Contacto c2 = new Contacto ("Pedro","Lopez","123456789");
-        
+        */
+        Contacto c1 = new Contacto ("Pedro","Lopez","2222222");
+        Contacto c2 = new Contacto ("Luis","Perez","983412452");
+        Contacto c3 = new Contacto ("Ana","Perez","111111111");
+
+        agenda.add(c1);
+        agenda.add(c2);
+        agenda.add(c3);
+        for (Contacto element : agenda) {
+            System.out.println(element + " ");
+        }
+
     }
 }

@@ -33,11 +33,11 @@ public class Contacto {
             return false;
         Contacto other = (Contacto) obj;
 
-        return nombre.equals(other.nombre) && apellido.equals(other.apellido);
+        return nombre.equals(other.nombre) && apellido.equals(other.apellido) && telefono.equals(other.telefono);
     }
     @Override
     public int hashCode(){
-        return nombre.hashCode() +apellido.hashCode();
+        return nombre.hashCode() + apellido.hashCode() + telefono.hashCode();
     }
 
     

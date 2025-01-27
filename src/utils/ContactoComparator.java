@@ -1,21 +1,18 @@
 package utils;
 
 import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
-import javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
-
 import models.Contacto;
 import org.w3c.dom.css.CSS2Properties;
 
 public class ContactoComparator implements Comparator<Contacto> {
-    
-
-
         @Override
         public int compare(Contacto o1, Contacto o2) {
-            // TODO Auto-generated method stub
+            
             int comparacionApellido = o1.getApellido().compareToIgnoreCase(o2.getApellido());
+            int comparacionNumero = o1.getTelefono().compareToIgnoreCase(o1.getTelefono());
+            if (comparacionNumero != 0) {
+                return comparacionNumero;
+            }
             if(comparacionApellido != 0){
                 return comparacionApellido;
             }
