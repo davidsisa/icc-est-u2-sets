@@ -1,6 +1,7 @@
 package main;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.ObjDoubleConsumer;
 
 import models.Contacto;
 import utils.ContactoComparator;
@@ -8,10 +9,10 @@ import utils.ContactoComparator;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        runHashSet();
-        runLinkedHashSet();  
-        runTreeSet();
-        runTreeSetComparator();
+        //runHashSet();
+        //runLinkedHashSet();  
+        //runTreeSet();
+        //runTreeSetComparator();
         runEjercicio();
     }
 
@@ -53,6 +54,8 @@ public class App {
     }
     public static void runEjercicio(){
         Set<Contacto> agenda = new TreeSet<>(new ContactoComparator());
-
+        Contacto c1 = new Contacto ("Pedro","Lopez","123456789");
+        Contacto c2 = new Contacto ("Pedro","Lopez","123456789");
+        
     }
 }

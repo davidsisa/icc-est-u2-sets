@@ -18,9 +18,28 @@ public class Contacto {
     public String getTelefono() {
         return telefono;
     }
+     
     @Override
     public String toString() {
         return "Contacto [nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + "]";
     }
+    @Override
+    public boolean equals (Object obj){
+        if(this == obj)
+            return true;
+        if(obj == null)
+            return false;
+        if(getClass() != obj.getClass())
+            return false;
+        Contacto other = (Contacto) obj;
+
+        return nombre.equals(other.nombre) && apellido.equals(other.apellido);
+    }
+    @Override
+    public int hashCode(){
+        return nombre.hashCode() +apellido.hashCode();
+    }
+
     
+
 }
